@@ -1,0 +1,60 @@
+body{
+    background-color: azure; /*sets the background color to azure for the body portion of the html file */
+    font-size: 14px; /*sets the font size to 14px for the ebody portion of the html file */
+    line-height: 20px;  /* sets the height of the texts for the body portion of the html file*/
+}
+.editor-note{
+    background-color: lightblue;    /*sets the back ground color just for editor note class*/
+}
+h1 {
+
+    font-family: 'Courier New', Courier, monospace;
+    color:lightcoral;             /* Uses courier new font, courier and monospace is backup fonts if courier new is not available for use*/
+    padding: 5%;   
+    text-align: start; /*Sets the content inside a border source:https://developer.mozilla.org/en-US/docs/Web/CSS/text-align */
+    border: solid; 
+
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color:lightcoral;          /*Pretty much the same stuff as the above but the padding is smaller since it's h2 */
+    padding: 4%;
+    text-align: start;
+    border: solid;
+}
+.navbar{
+    font-size:15px;
+    background-color: lightyellow;
+    padding: 3%;
+    text-align: start;
+    border: solid lightblue;   
+}
+
+p {
+    font-family: 'Times New Roman', serif, monospace;
+    color:black
+}
+.center{
+    margin: auto; /* Centers the element found it in https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
+    width:66%;
+} 
+a{
+    text-decoration:dashed underline; /*puts a dashed line underneath the letters in hyperlinks  */
+}
+a:hover{
+    box-shadow: inset 100px 0 0 0 #54b3d6;  /*does the box shadow effect found it in https://css-tricks.com/css-link-hover-effects/ */
+    color:white;
+}
+img{ /*styles the img elements*/
+    width:280px;   /*https://www.w3docs.com/snippets/css/how-to-add-border-to-image-in-css.html  */
+    padding:5px;   /*Mostly learned from that website; Width sets the width of the image element, padding creates space between the image and the border */
+    border: 8px groove rgb(203, 255, 80); /*width of the border is 8px, groove is a borderstyle i found, and rgb is color */
+    background-color: lightblue;
+}
+
+.displayinc{
+    display: inline-block;
+    padding:10px;
+}
+
