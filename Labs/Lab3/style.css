@@ -6,6 +6,12 @@ body{
 .editor-note{
     background-color: lightblue;    /*sets the back ground color just for editor note class*/
 }
+footer{  /* Made the footer like the one in HW4*/
+        font-size: .60em;
+        font-style: italic;
+        text-align: center;
+    }
+
 h1 {
 
     font-family: 'Courier New', Courier, monospace;
@@ -25,10 +31,10 @@ h2 {
 }
 .navbar{
     font-size:15px;
+    text-align:center;
+    font-weight:bold;
     background-color: lightyellow;
     display: block;
-    padding: 3%;
-    text-align: start;
     border: solid lightblue;   
 }
 
@@ -37,8 +43,7 @@ p {
     color:black
 }
 .center{
-    margin: auto; /* Centers the element found it in https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
-    width:66%;
+    text-align:center; /* Centers the element found it in https://www.w3schools.com/css/css_align.asp */
 } 
 a{
     text-decoration:dashed underline; /*puts a dashed line underneath the letters in hyperlinks  */
