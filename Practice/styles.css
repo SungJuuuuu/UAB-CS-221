@@ -1,0 +1,36 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px; /* Three columns of 100px each */
+    grid-template-rows: 100px 100px 100px; /* Three rows of 100px each */
+    grid-gap: 10px; /* 10px gap between grid items */
+  }
+  
+  .grid-item {
+    background-color: #3498db; /* Example background color */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .grid-item-span {
+    grid-column: span 3; /* This makes the item span three columns */
+    grid-row: span 3; /* This makes the item span three rows */
+  }
