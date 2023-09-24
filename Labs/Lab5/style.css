@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1A1A1A;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px; 
+    line-height: 24px;  
+    color:white;
+    
+}
+.column {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+.card {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  }
+h1 {            
+    padding: 5%;   
+    text-align: start; /*Sets the content inside a border source:https://developer.mozilla.org/en-US/docs/Web/CSS/text-align */
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 4%;
+    font-family: 'Dosis', sans-serif;
+    text-align: start;
+    border: solid;
+    font-weight: bold;
+}
+
+center{
+    text-align:center; /* Centers the element found it in https://www.w3schools.com/css/css_align.asp */
+} 
+.displayinc{
+    display: inline-block; /*https://developer.mozilla.org/en-US/docs/Web/CSS/display Displays the elements to be an incline-block. I think it makes texts look neater.*/
+    padding:10px;
+}
+section {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+/*Header */
+.profile-image {
+    width: 100px;
+    border:2px solid white;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Navigation */
+li{
+    list-style:none;
+}
+.navigation {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap:10px;
+    justify-content: center;
+  }
+.social-links{
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap:10px;
+    justify-content: center;
+}
+  .nav-link {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    transition: font-size 0.3s ease, border-bottom 0.3s ease;
+    text-align: center;  
+  }
+  .nav-link:hover{
+   color: #708DE6;
+  }
+
+
+/* Contact Form */
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #708DE6; 
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+  }
+  .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #708DE6;
+  }
+  .contact-form textarea {
+    height: 150px; 
+    resize: vertical; 
+  }
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Lato', sans-serif;
+  }
+  .contact-form select {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 20px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+  }
+  .contact-form button {
+    width: 100px; 
+    height: 50px;
+    background-color: #FFFFFF; 
+    border: none;
+    color: #1A1A1A;
+    cursor: pointer;
+    font-family: 'Anton', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  .contact-form button:hover {
+    background-color: #708DE6;
+  }
+
+
+
+  /* Footer */
+  footer{
+    font-size: .60em;
+    font-style: italic;
+    text-align: center;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:10px 0;
+}
