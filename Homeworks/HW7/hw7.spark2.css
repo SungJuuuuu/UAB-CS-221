@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+body{
+    background-color: #0ae2e6;
+}
+header{
+    display:flex;
+    justify-content: center; 
+    align-items: center; 
+    position:sticky;
+    top: 0;
+    border-bottom: 1px  solid #2e3f22;
+}
+
+section {  
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+
+.grid-container{
+    display:grid;
+    grid-template-rows: repeat(2,200px);
+    grid-template-columns: repeat(3,200px);
+    gap: 1em;
+}
+.grid-item{
+    width: 200px;
+    height: 200px;      
+    background-size: cover;           /* Some of the images aspect ratio are too big for the grid items so it doesn't show fully */
+    background-position: center;
+    position:relative;
+    transition: transform 0.2s;
+    overflow:hidden;
+    border-radius: 10px;
+    border:1px  solid #2e3f22
+}
+
+.grid-item:hover{
+    transform: scale(1.05);
+}
+.grid-item:nth-child(even){
+    border-style:dashed;
+}
+.item-1:hover::before {
+    content: "Image 1";   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background: rgba(0, 0, 0, 0.5);    
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  .item-2:hover::before {
+    content: "Image 2";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  .item-3:hover::before {
+    content: "Image 3"; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  .item-4:hover::before {
+    content: "Image 4"; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+  .item-5:hover::before {
+    content: "Image 5"; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+.item-6:hover::before {
+    content: "Image 6"; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+  .grid-item:hover:after {
+    content: "🔎"; 
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    font-size: 2rem;
+    color: white;
+    z-index: 2;
+  }
+  
