@@ -1,0 +1,423 @@
+/* Reset some default browser styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Setting Lato as the default font */
+body {
+  font-family: 'Lato', sans-serif;
+  background: #f1f1f1;
+}
+main {
+  padding-bottom: 20px;
+}
+
+/* Setting Doris as the headings/display font */
+h1, h2, h3, h4, h5, h6, .hero-title {
+  font-family: 'Dosis', sans-serif;
+}
+/* Make a sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #edf6f9;
+  z-index: 100;
+}
+
+/* Center the content to 70% of the header */
+.header-content {
+  max-width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Style for the logo */
+.logo span {
+  font-size: 20px;
+}
+  
+/* Navigation styles */
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  align-items: center;
+  text-align: center;
+}
+
+.navigation a{
+  margin-left: 0px;
+}
+
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #003049;
+  font-size: 16px;
+  position: relative;
+  transition: font-size 0.3s ease, border-bottom 0.3s ease;
+  text-align: center;  /* This will help to keep the text centered within the grid cell */
+}
+
+.nav-link:hover {
+  font-size: 20px;
+}
+
+/* Add a line at the bottom of the link when hovered */
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: #f77f00;
+}
+
+/* Hambuger Toggle */
+.hamburger-icon-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menuToggle {
+  display: none;
+}
+
+.hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+  display: block;
+  background-color: #000;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.hamburger-icon::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.hamburger-icon::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menuToggle:checked + .hamburger-icon-container .hamburger-icon::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menuToggle:checked + .hamburger-icon-container .hamburger-icon {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menuToggle:checked + .hamburger-icon-container .hamburger-icon::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+
+/* Hero Section */
+.hero {
+  width: 100vw;
+  height: 300px; 
+  /* Use Unsplash for great hi-res images that work well for hero-images. */
+  background-image: url('https://images.unsplash.com/photo-1595864706735-b8af61a279f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80');
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  position: relative;
+}
+
+/* The overlay that will be clear on hover */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* This adds a slight dark overlay. You can adjust as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  transition: backdrop-filter 1s ease;
+}
+
+.hero:hover .hero-overlay {
+  backdrop-filter: blur(0px);
+}
+
+/* Optionally can use Flexbox here */
+.hero-title {
+  font-size: 48px; /* adjust based on your preference */
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%; 
+  left: 25%; /* Adjust to move it slightly off-center to the left */
+  transform: translateY(-50%); /* Vertically center the text */
+  z-index: 2; /* Ensures the text stays on top of the overlay */
+}
+
+
+
+/* Main Content */
+.content-wrapper {
+  max-width: 80%;
+  margin: 40px auto; /* Adding some top and bottom margin for spacing */
+}
+
+.content-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* space between the two columns */
+}
+
+.column {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 20px; /* Adds some space between the header and the card content */
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #edf6f9;
+}
+
+/* Unordered List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  padding: 8px 0;
+  position: relative;
+  font-weight: 400;
+}
+
+/* A pseudo element before each list item */
+.skills-list li::before {
+  content: '»';
+  color: #f77f00;
+  margin-right: 10px;
+}
+
+/* General styling for inputs and textarea */
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa; 
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus{
+  background-color: #edf6f9;
+  border-bottom: 2px solid #f77f00;
+}
+
+.contact-form textarea {
+  height: 150px; 
+  resize: vertical; /* Allows only vertical resizing */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Lato', sans-serif;
+}
+
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+}
+
+/* Styling the submit button */
+.contact-form button {
+  width: 100px; 
+  height: 50px;
+  background-color: #f77f00; 
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Anton', sans-serif;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e56600;
+}
+
+footer { 
+  width: 100%;        
+  background-color: #f77f00;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position:fixed;
+  bottom: 0;
+}
+
+
+/* Hides the checkbox */
+.toggle {
+  display: none;
+}
+
+/* Header bar is a flexbox (and also a label for our checkbox) */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: #f77f00;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.resume-container .resume-item:nth-child(even) .header-bar{
+  background-color: #003049;
+}
+
+
+/* Hide the responsibilities section initially */
+.responsibilities {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out; 
+}
+
+/* This uses a general sibling combinator (~) to select all possible siblings of the toggle class*/
+/* This allowed styling of the .responsibilities based on the checked state of the .toggle checkbox without them having to be directly adjacent. */
+.toggle:checked ~ .responsibilities {
+  max-height: 500px; /* Adjust this value depending on content size */
+}
+
+/* Collapsing state animation */
+.toggle:not(:checked) ~ .responsibilities {
+    transition-delay: -0.5s;  /* Small delay when collapsing to match expanding */
+}
+
+/* Basic styling for the icon */
+.icon {
+  display: inline-block;
+  transition: transform 0.5s ease;
+}
+
+.toggle:checked + .header-bar .icon {
+  transform: rotate(45deg);
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .content-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Display Hamburger - force to top-right corner*/
+  .hamburger-icon-container {
+    color: black;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+  }
+  /* Change nav display to flex column */
+  .navigation {
+    display: flex;
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* While checkbox is NOT toggled/checked, hide nav */
+  #menuToggle ~ .navigation li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  /* While checkbox IS toggled/checked, show nav */
+  #menuToggle:checked ~ .navigation li {
+    height: 2.5em;
+    padding: 0.5em;
+    padding-left: 1em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menuToggle:checked ~ .navigation li:hover::before {
+    content: " ";
+    background-color: orange;
+    height: 100%;
+    width: 5px;
+    margin-right: 10px;
+  }
+
+  .navigation > li {
+    display: flex;
+    justify-content: left;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #edf6f9;
+  }
+}
