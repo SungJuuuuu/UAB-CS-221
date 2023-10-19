@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grading</title>
+        <script>
+        let result;
+        let grade=prompt("What did you make on your exam?"," ee");
+        grade= Number(grade);
+        switch(true){
+            case grade>=90:
+                result="Grade:"+grade+ "\n Letter Grade: A \n Reward: Candy";
+                break;
+            case grade>=80 && grade<=89:
+                result="Grade:"+grade+ "\n Letter Grade: B \n Reward: Apple";
+                break;
+            case grade>=70 && grade<=79:
+                result="Grade:"+grade+ "\n Letter Grade: C \n Reward: Mint";
+                break;
+            case grade>=60 && grade<=69:
+                result="Grade:"+grade+ "\n Letter Grade: D \n Reward: Pencil";
+                break;
+            case grade<=59:
+                result="Grade:"+grade+ "\n Letter Grade: F \n Reward: Awkward conversations with parents";
+                break;
+            default:
+                result="Make sure you are putting in a number between 1-100 for your grade!"; /* Add some sort of error handling if the prompt value entered is invalid. If they enter anything other than a number, than this message pops up in the console*/
+        }
+        console.log(result); 
+        </script>
+    </head>
+</html>
