@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navigation {
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.rock {
+    border: 1px solid green;
+    background-color: green;
+    padding: 20px;
+}
+
+.paper {
+    border: 1px solid lightblue;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.scissor {
+    border: 1px solid red;
+    background-color: red;
+    padding: 20px;
+}
+.result {
+    color:yellow;
+    font-size: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 428px) {  /* when the width is 428 or below, there will only 1 column of nav elements instead of three  */
+    .navigation {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+}
